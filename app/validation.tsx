@@ -253,23 +253,6 @@ export default function ValidationScreen() {
                   </ThemedText>
                 )}
               </Pressable>
-
-              {/* Correction Button - Only show "Corregir a Fractura" when it's normal */}
-              {!isFracture && (
-                <Pressable 
-                  style={[
-                    styles.validationButton, 
-                    styles.correctionButton,
-                    isValidating && styles.disabledButton
-                  ]} 
-                  onPress={() => handleValidate(false, 'fractura')}
-                  disabled={isValidating}
-                >
-                  <ThemedText type="defaultSemiBold" style={styles.correctionButtonText}>
-                    🔄 Corregir a Fractura
-                  </ThemedText>
-                </Pressable>
-              )}
             </View>
           </View>
 
